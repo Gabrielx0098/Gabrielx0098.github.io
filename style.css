@@ -1,0 +1,181 @@
+/* 基本样式 */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 莫兰迪配色 */
+:root {
+    --primary-color: #6c757d; /* 灰色 */
+    --secondary-color: #000008; /* 灰绿色 */
+    --accent-color: 	#546196; /* 灰粉色 */
+    --background-color: #f0f0f0; /* 浅灰色背景 */
+}
+
+/* 页眉 */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* 导航栏 */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #8f9cb9; /* 加深后的浅紫色 */
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* 内容模块 */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: var(--background-color);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    section {
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+/* 图片部分王者海报链接样式 */
+#picture ul li a {
+    color: #555;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#picture ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 不同图片的样式 */
+.wallpaper-img {
+    width: 300px; 
+    height: auto;
+}
+
+.king-poster-img {
+    width: 450px; 
+    height: auto;
+}
+
+.interesting-design-img {
+    width: 200px; 
+    height: auto;
+}
+
+/* 箭头样式 */
+.arrow {
+    margin-left: 5px;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* 展开时箭头旋转 */
+.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* 展开内容的样式 */
+.todo-description {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    font-size: 0.7rem; /* 字体小一些 */
+    color: #777; /* 颜色淡一些 */
+}
+
+.todo-description.open {
+    max-height: 1000px;
+    opacity: 1;
+}
