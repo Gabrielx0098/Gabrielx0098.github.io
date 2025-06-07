@@ -22,3 +22,9 @@ document.querySelectorAll('#todolist ul li').forEach(item => {
         }
     });
 });
+
+let count=0;
+document.getElementById('countButton').addEventListener('click', function(){
+    count++;
+    document.getElementById('count').textContent = count;
+});
